@@ -15,6 +15,10 @@ class App extends React.Component {
     }
   }
 
+  onChangeType = ({ target: { value } }) => {
+    this.setState({ filters: { ...this.state.filters, type: value } });
+  };
+
   render() {
     return (
       <div className="ui container">
